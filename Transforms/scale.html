@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Scale transform</title>
+	<style type="text/css">
+		body{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			color: white;
+			font-family: Arial;
+		}
+		.container{
+			border: 1px solid red;
+		}
+		.container:hover .square{
+			transform: scale(.5);
+		}
+
+		.square{
+			width: 200px;
+			height: 200px;
+			background: #7dc900;
+			margin: 20px;
+			transition: .3s;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="square">
+		</div>	
+	</div>
+	
+</body>
+</html>
