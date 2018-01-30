@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Transitions CSS</title>
+    <style>
+      body{
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .ball{
+        width: 100px;
+        height: 100px;
+        border-radius:50%;
+        background-color:red;
+        transition-duration: 1s;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+      }
+      .basket{
+        border: 1px solid red;
+        position: relative;
+        height: 200px;
+        width: 100%;
+        transform: rotate(5deg) skew(10deg) translate(100px) scale(.5);
+      }
+      .ball.a{
+        background: red;
+        left: 0;
+      }
+      .ball.b{
+        background-color: blue;
+        right: 0;
+      }
+      .basket:hover .ball.a{
+        left: calc(50% - 100px);
+      }
+
+      .basket:hover .ball.b{
+        right: calc(50% - 100px);
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="basket">
+      <div class="ball a">Hola</div>
+      <div class="ball b">Mundo</div>
+    </div>
+  </body>
+</html>
