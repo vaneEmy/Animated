@@ -31,15 +31,16 @@
 			animation-duration: 2s;
 			animation-delay: 1s;
 			animation-iteration-count: infinite;
-						 
+			animation-direction: alternate;
+			position: relative; 
 		}
 		
 		@keyframes square{
 			0%{	
-				opacity: 1;
+				left: 0; 
 			}
 			100%{
-				opacity: 0;
+				left:calc(100% - 240px);
 			}
 		}	
 	</style>
