@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Animation transform</title>
+	<style type="text/css">
+		body{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			color: white;
+			font-family: Arial;
+		}
+		.container{
+			border: 1px solid red;
+			width: 100%
+		}
+		
+		.container:hover .square{
+			animation-play-state: paused; 
+		}
+
+		.square{
+			width: 200px;
+			height: 200px;
+			background: #7dc900;
+			margin: 20px;
+			border-radius: 50%;
+			animation-name: square, rebote;
+			animation-duration: 3s, 300ms;
+			animation-delay: 1s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+			position: relative; 
+			animation-timing-function: linear, ease-in-out;
+		}
+		
+		@keyframes square{
+			0%{	
+				left: 0; 
+			}
+			100%{
+				left:calc(100% - 240px);
+			}
+		}
+
+		@keyframes rebote{
+			from{
+				transform: translateY(0);
+			}
+			to{
+				transform: translateY(100px) scale(1, .8);	
+			}
+		}	
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="square">
+		</div>	
+	</div>
+	
+</body>
+</html>
